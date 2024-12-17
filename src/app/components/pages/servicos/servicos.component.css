@@ -16,7 +16,11 @@ h1 {
   font-family: "Vollkorn", serif;
   font-size: calc(var(--margem) * 2);
   line-height: 1.25;
-  font-weight: 400;
+  font-weight: bold;
+}
+
+h1:not(.maior) {
+  margin-top: calc(var(--margem)* 5);
 }
 
 #btn {
@@ -60,9 +64,13 @@ nav a,
   box-sizing: border-box;
   margin: auto;
   max-width: 1008px;
-  padding: calc(var(--margem) * 1) var(--margem);
+  padding: calc(var(--margem)* 2.5) var(--margem);
 }
-
+ 
+.container, nav a, .rel, .txt-destaque, .decor {
+  position: relative;
+}
+ 
 .container + .container {
   padding-top: 0;
 }
