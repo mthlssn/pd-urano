@@ -1,0 +1,113 @@
+<main>
+  <section id="servicos" class="manchete">
+      <div class="container">
+          <h1>Carreiras</h1>
+      </div>
+  </section>
+  <section>
+      <div class="container">
+        <div class="linha">
+          <div class="coluna col-2">
+            <p>
+              Com mais de 30 anos de mercado, a PD Case tem como objetivo fornecer soluções para o mercado financeiro, serviço de fábrica de software, outsourcing, desenvolvimento de projetos, soluções integradas e capacitação de profissionais da área de TI.
+            </p>
+            <p class="margem bg-primaria">
+              É apaixonado por tecnologia? Gosta de trabalhar em equipe e desenvolver soluções? Venha fazer parte da nossa equipe!
+            </p>
+            <p>
+              A PD Case é focada em contratar pessoas protagonistas, atuando com paixão e mentalidade inclusiva, respeitando a singularidade de cada pessoa e oferecendo a todos os colaboradores meios para que possam desenvolver o seu potencial e protagonismo.
+            </p>
+            <p>
+              Envie seu currículo e boa sorte =]
+            </p>
+            <form id="formCv" name="formCv" class="form" method="POST" action="" enctype="multipart/form-data">
+              <fieldset>
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" placeholder="Nome" required="">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="email" class="form-control" placeholder="E-mail" required="">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="linkedin" class="form-control" placeholder="Linkedin">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="4" placeholder="Resumo"></textarea>
+                </div>
+                <div class="form-group">
+                  <select id="cmbCargo" name="cargo" required="">
+                    <option selected="">cargo de interesse...</option>
+                    <option value="Analista de requisitos">Analista de requisitos</option>
+                    <option value="Desenvolvedor Java">Desenvolvedor Java</option>
+                    <option value="Gerente de projetos">Gerente de projetos</option>
+                    <option value="Analista de testes">Analista de testes</option>
+                    <option value="Outros">Outros</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="file" class="none" name="Fichier1" id="Fichier1">
+                  <div class="agrupar" name="Fichier1">
+                    <input type="text" class="form-control" placeholder="Arquivo..." id="fileCurriculo">
+                    <button class="btn btn-primary btn-choose" type="button" id="btnAddFile">
+                        Anexe seu curriculo
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group btn-group">
+                  <label class="fonte-menor" l="">
+                    <input type="checkbox" class="user-actions" id="privacy"> Li e estou ciente da <a [routerLink]="['/politica-de-privacidade']" class="link" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Política de Privacidade</a> e
+                  proteção de Dados da PD Case.
+                  </label>
+                </div>
+                <div class="form-group btn-group">
+                  <label class="fonte-menor">
+                    <input type="checkbox" class="user-actions" id="lgpd"> Estou ciente de que os dados tratados são necessários para análise de minha candidatura a vagas de trabalho na PD Case.
+                  </label>
+                </div>
+                <div class="form-group btn-group">
+                  <div class="g-recaptcha" data-sitekey="6LdGsyIqAAAAAN64PQfzPWCanWpFvBVuG8kd7w0N"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-euv5oatpg65l" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdGsyIqAAAAAN64PQfzPWCanWpFvBVuG8kd7w0N&amp;co=aHR0cHM6Ly93d3cucGRjYXNlLmNvbTo0NDM.&amp;hl=pt-BR&amp;v=pPK749sccDmVW_9DSeTMVvh2&amp;size=normal&amp;cb=iumy8bx1u24g"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+                </div>
+              </fieldset>
+              <button type="button" name="btnEnviarEmail" id="btnEnviarEmail" class="btn btn-form" disabled="">
+                  enviar
+              </button>
+              <div class="success" style="display:none">
+                <h4>Currículo enviado com sucesso</h4>
+                Boa sorte!
+              </div>
+              <div class="error" style="display:none">
+                <h4>Ocorreu um erro ao enviar seu currículo</h4>
+                Tente novamente.
+              </div>
+            </form>
+          </div>
+          <div class="coluna">
+            <h3>Benefícios</h3>
+            <div class="grid grid-1">
+              <div class="tag-saude bg-secundaria">
+                <div class="margem">Plano de saúde</div>
+              </div>
+              <div class="tag-dente bg-secundaria">
+                <div class="margem">Plano odontológico</div>
+              </div>
+              <div class="tag-home bg-secundaria">
+                <div class="margem">Home office</div>
+              </div>
+              <div class="tag-estudo bg-secundaria">
+                <div class="margem">Bônus por certificações</div>
+              </div>
+              <div class="tag-comida bg-secundaria">
+                <div class="margem">Ticket refeição</div>
+              </div>
+              <div class="tag-vida bg-secundaria">
+                <div class="margem">Seguro de vida</div>
+              </div>
+              <div class="tag-academia bg-secundaria">
+                <div class="margem">Gympass</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</main>

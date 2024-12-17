@@ -1,0 +1,207 @@
+/* Reset e Estilo Global */
+* {
+  margin: 0;
+}
+
+body,
+input,
+textarea,
+select {
+  font: 16px / 1.625 "Raleway", sans-serif;
+  background: var(--cor-bg);
+  color: var(--cor-fonte);
+}
+
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+div {
+  unicode-bidi: isolate;
+}
+
+/* Manchete */
+.manchete {
+  background: url(/assets/logo-bg2.svg) 20% center / auto 110%,
+    url(/assets/logo-bg2.svg) 0 center / auto 160% fixed,
+    radial-gradient(ellipse at left top, var(--cor-primaria), #000);
+}
+
+/* H1 */
+h1 {
+  display: block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  font-size: calc(var(--margem) * 2);
+  line-height: 1.25;
+  font-weight: 400;
+  font-family: "Vollkorn", serif;
+  font-weight: bold;
+}
+
+h1:not(.maior) {
+  margin-top: calc(var(--margem) * 5);
+}
+
+h2 {
+  font-family: "Vollkorn", serif;
+  font-size: 30px;
+  color: var(--cor-fonte);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: calc(var(--margem) / 2 + 12px);
+  margin: 0.2em 0;
+  color: var(--cor-fonte);
+}
+
+h3:not(:last-child) {
+  margin-bottom: var(--margem);
+}
+
+h4 {
+  margin: -1px 0px; /* Margem conforme a imagem */
+  font: 16px "Raleway", sans-serif; /* Fonte especificada */
+  color: var(--cor-bg);
+  font-weight: 590;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0.2em 0 1em 0;
+}
+
+/* Container Geral */
+.container {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1008px;
+  padding: calc(var(--margem) * 2.5) var(--margem);
+}
+
+.container + .container {
+  padding-top: 0;
+}
+
+/* Grid e Colunas */
+.linha {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: uma única coluna */
+  gap: 16px;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: uma única coluna */
+  gap: 24px;
+  width: 100%;
+}
+
+.coluna {
+  background-color: var(--cor-secundaria);
+  padding: 16px; /* Ajustado para mobile */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--cor-bg);
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.link-container {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-bg);
+  padding: 16px; /* Ajustado para mobile */
+  text-align: left;
+  transition: background-color 0.2s ease-in-out;
+  width: 100%;
+}
+
+/* Listas */
+li {
+  margin-bottom: 0.5em;
+}
+
+ol,
+ul {
+  padding-left: 1.5rem;
+  margin-top: 1em;
+}
+
+/* Responsividade para Desktop */
+@media screen and (min-width: 1000px) {
+  .linha {
+    grid-template-columns: repeat(5, 1fr); /* Desktop: cinco colunas */
+    gap: 16px;
+  }
+
+  .container-grid {
+    grid-template-columns: repeat(3, 1fr); /* Desktop: três colunas */
+    gap: 48px;
+  }
+
+  .coluna {
+    flex: 1 1;
+    padding: 24px;
+  }
+
+  h1:not(.maior)::before,
+  h1:not(.maior)::after {
+    content: "";
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 1px;
+    width: 24px;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 15%;
+  }
+
+  h1:not(.maior)::after {
+    left: 24px;
+    top: 50%;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 999px) {
+  /* h1 - Avaliação de risco */
+  h1 {
+    font-size: 32px;
+    font-family: "Vollkorn", serif;
+    margin: 40px 0px -24px;
+    color: #ffffffd9;
+  }
+
+  /* div.container */
+  .container {
+    padding: 40px 16px;
+    font: 16px "Raleway", sans-serif;
+    color: #ffffffd9;
+  }
+
+  /* div.linha */
+  .linha {
+    display: flex;
+    flex-direction: column; /* Colunas em formato de lista no mobile */
+    gap: 16px; /* Espaçamento entre os itens */
+  }
+
+  .linha .coluna {
+    padding: 16px; /* Espaçamento interno */
+    text-align: left;
+    font: 16px "Raleway", sans-serif;
+    font-weight: bold;
+  }
+
+  /* Ajuste no título dentro das colunas */
+  .linha .coluna h3 {
+    margin: 0; /* Remove margens extras */
+    font-size: 18px; /* Ajuste no tamanho */
+    font-weight: bold;
+  }
+}

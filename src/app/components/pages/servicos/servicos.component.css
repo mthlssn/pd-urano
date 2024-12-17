@@ -1,0 +1,348 @@
+/* Estilos base */
+body,
+input,
+textarea,
+select {
+  font: 16px/1.625 "Raleway", sans-serif;
+  background: var(--cor-bg);
+  color: var(--cor-fonte);
+}
+
+main {
+  background: var(--cor-separador);
+}
+
+h1 {
+  font-family: "Vollkorn", serif;
+  font-size: calc(var(--margem) * 2);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+#btn {
+  color: #161d26;
+  font: 16px "Raleway", sans-serif;
+  margin: -1px 0 0 0;
+}
+
+#servicos {
+  font-family: "Vollkorn", serif;
+  font-size: 30px;
+  color: #ffffffd9;
+  margin: 0 0 24px;
+}
+
+li + li,
+.form-group + .form-group {
+  margin-top: calc(var(--margem) / 2);
+}
+
+.margem,
+.success,
+.error {
+  padding: var(--margem);
+}
+
+.descricao p + p {
+  margin-top: calc(var(--margem) / 2);
+}
+
+/* Containers e posicionamento */
+.container,
+nav a,
+.rel,
+.txt-destaque,
+.decor {
+  position: relative;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1008px;
+  padding: calc(var(--margem) * 1) var(--margem);
+}
+
+.container + .container {
+  padding-top: 0;
+}
+
+/* Layout flexível */
+.linha {
+  display: flex;
+  gap: calc(var(--margem) * 2);
+}
+
+.descricao-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: calc(var(--margem) * 2);
+}
+
+.texto {
+  flex: 4.5;
+}
+
+.selos-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.selo {
+  display: block;
+  width: calc(var(--margem) * 3);
+  height: calc(var(--margem) * 3);
+  margin: 0 calc(var(--margem) / 2);
+}
+
+/* Grid layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--margem);
+}
+
+.item {
+  background: var(--cor-bg);
+  padding: var(--margem);
+  text-align: center;
+  border: 1px solid var(--cor-fonte);
+}
+
+.manchete {
+  background: url(/assets/logo-bg2.svg) 20% center / auto 110%,
+    url(/assets/logo-bg2.svg) 0 center / auto 160% fixed,
+    radial-gradient(ellipse at left top, var(--cor-primaria), #000);
+}
+
+/* Estilos para links com classe "tag-" */
+a[class^="tag-"] {
+  display: block;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  height: 150px;
+}
+
+a[class^="tag-"]:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+a[class^="tag-"]::before {
+  content: "";
+  display: block;
+  background: var(--cor-terciaria);
+  height: 45%;
+  transition: background-color 0.3s ease;
+}
+
+a[class^="tag-"]:hover::before {
+  background: var(--cor-terciaria);
+}
+
+a[class^="tag-"] .texto-section {
+  background: var(--cor-secundaria);
+  height: 55%;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+a[class^="tag-"]:hover .texto-section {
+  background: var(--cor-terciaria);
+}
+
+a[class^="tag-"] .icone-section {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Ícones específicos para cada tag */
+.tag-fabrica .icone-section {
+  background-image: url("/assets/fabrica.svg");
+}
+
+.tag-consultoria .icone-section {
+  background-image: url("/assets/consultoria.svg");
+}
+
+.tag-outsourcing .icone-section {
+  background-image: url("/assets/pais.svg");
+}
+
+.tag-processos .icone-section {
+  background-image: url("/assets/processos.svg");
+}
+
+.tag-produtos .icone-section {
+  background-image: url("/assets/produtos.svg");
+}
+
+.tag-mainframe .icone-section {
+  background-image: url("/assets/mainframe.svg");
+}
+
+.tag-banco .icone-section {
+  background-image: url("/assets/banco.svg");
+}
+
+.tag-dinheiro .icone-section {
+  background-image: url("/assets/dinheiro.svg");
+}
+
+.tag-fomento .icone-section {
+  background-image: url("/assets/fomento.svg");
+}
+
+.tag-mobile .icone-section {
+  background-image: url("/assets/mobile.svg");
+}
+
+.tag-controladoria .icone-section {
+  background-image: url("/assets/controladoria.svg");
+}
+
+.tag-informes .icone-section {
+  background-image: url("/assets/informes.svg");
+}
+
+a[class^="tag-"] .texto-section h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: #161d26;
+  margin: -1px 0 0 0;
+}
+
+/* Media queries para telas maiores */
+@media screen and (min-width: 1000px) {
+  .linha {
+    display: flex;
+    gap: calc(var(--margem) * 2);
+  }
+
+  fieldset .linha {
+    margin: 0 -6px;
+  }
+
+  .col-2 {
+    grid-column: span 2;
+  }
+
+  .col-3 {
+    grid-column: span 3;
+  }
+
+  .lin-2 {
+    grid-row: span 2;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .icone-menu,
+  .mobile {
+    display: none;
+  }
+
+  .pb .logo {
+    background-position: 0 -80px;
+  }
+
+  .coluna {
+    flex: 1 1;
+  }
+
+  fieldset .coluna {
+    margin: 0 6px;
+  }
+
+  .coluna.col-2 {
+    flex-grow: 2;
+  }
+
+  aside.coluna {
+    flex: 0 0 168px;
+  }
+
+  .coluna:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+
+  nav .rel {
+    float: left;
+  }
+
+  .aleta:hover + .categorias,
+  .categorias:hover {
+    display: block;
+  }
+
+  h1:not(.maior)::before,
+  h1:not(.maior)::after {
+    content: "";
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 1px;
+    width: 24px;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 15%;
+  }
+
+  h1:not(.maior)::after {
+    left: 24px;
+    top: 50%;
+    bottom: 0;
+  }
+}
+
+/* Estilos para selos */
+#selo1 {
+  background: url("/assets/selo-c.svg") no-repeat center;
+}
+
+#selo2 {
+  background: url("/assets/selo-f.svg") no-repeat center;
+}
+
+@media screen and (max-width: 999px) {
+  :root {
+      --margem: 16px;
+      --tam-titulo: 9px;
+  }
+  h1:not(.maior) {
+    margin: calc(var(--margem)* 2.5) 0 calc(var(--margem)* -1.5);
+}
+aside {
+  margin-top: calc(var(--margem)* 2);
+}
+.grid {
+  grid-template-columns: repeat(1, 1fr);
+}
+}
+
+@media screen and (max-width: 768px) {
+  .descricao-container {
+    flex-direction: column; /* Coloca o texto e os selos em uma coluna */
+  }
+
+  .selos-container {
+    justify-content: flex-start; /* Alinha os selos à esquerda (ou ajuste conforme necessário) */
+    margin-top: calc(var(--margem) * 1.5); /* Adiciona espaço entre o texto e os selos */
+  }
+}
+

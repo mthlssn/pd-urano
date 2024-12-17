@@ -1,0 +1,206 @@
+:root {
+    --cor-primaria: #243650;
+    --cor-primaria-bg: rgba(42, 109, 210, 0.3);
+    --cor-secundaria: #F4BC1D;
+    --cor-terciaria: #A3C4BC;
+    --cor-secundaria-bg: rgba(243, 188, 50, 0.3);
+    --cor-cinza: #F7F6F4;
+    --cor-separador: rgba(0, 0, 0, .08);
+    --cor-bg: #161d26;
+    --cor-fonte: rgba(255, 255, 255, .85);
+    --cor-fonte-forte: #fff;
+    --cor-fonte-fraca: rgba(255, 255, 255, .5);
+    --margem: 24px;
+    --tam-titulo: 16px;
+}
+
+main {
+    background: var(--cor-separador);
+}
+* {
+    margin: 0;
+}
+user agent stylesheet
+main {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+.manchete {
+    background: url(/assets/logo-bg2.svg) 20% center / auto 110%, url(/assets/logo-bg2.svg) 0 center / auto 160% fixed, radial-gradient(ellipse at left top, var(--cor-primaria), #000);
+}
+* {
+    margin: 0;
+}
+user agent stylesheet
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+
+.container {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1008px;
+    padding: calc(var(--margem)* 2.5) var(--margem);
+}
+.container, nav a, .rel, .txt-destaque, .decor {
+    position: relative;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    h1:not(.maior)::before, h1:not(.maior)::after {
+        content: "";
+        
+        border: solid rgba(255, 255, 255, .15);
+        border-width: 0 1px;
+        width: 24px;
+        position: absolute;
+        left: -1px;
+        top: 0;
+        bottom: 15%;
+    }
+}
+
+
+h1 {
+    font-size: calc(var(--margem)* 2);
+    line-height: 1.25;
+    font-weight: 400;
+}
+h1, h2 {
+    font-family: "Vollkorn", serif;
+}
+
+
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+
+:-webkit-any(article, aside, nav, section) h1 {
+    
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+@media screen and (min-width: 1000px) {
+    h1:not(.maior)::after {
+        left: 24px;
+        top: 50%;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h1:not(.maior)::before, h1:not(.maior)::after {
+        content: "";
+       
+        border: solid rgba(255, 255, 255, .15);
+        border-width: 0 1px;
+        width: 24px;
+        position: absolute;
+       
+       
+       
+    }
+}
+
+
+h1 {
+    font-size: calc(var(--margem)* 2);
+    line-height: 1.25;
+    font-weight: 400;
+}
+h1, h2 {
+    font-family: "Vollkorn", serif;
+}
+
+
+
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+
+* {
+    margin: 0;
+}
+user agent stylesheet
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+.container {
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 1008px;
+    padding: calc(var(--margem)* 2.5) var(--margem);
+}
+.container, nav a, .rel, .txt-destaque, .decor {
+    position: relative;
+}
+
+
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}
+
+
+* {
+    margin: 0;
+}
+user agent stylesheet
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+body, input, textarea, select {
+    font: 16px / 1.625 "Raleway", sans-serif;
+    background: var(--cor-bg);
+    color: var(--cor-fonte);
+}

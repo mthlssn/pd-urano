@@ -1,0 +1,124 @@
+<header [ngClass]="{ header2: scrollPosition > 0 && larguraSelection <= 1000 }">
+  <div class="content">
+    <div class="content2">
+      <a [routerLink]="['/']" class="logo" #logo> pdcase </a>
+      <div class="nav" #nav>
+        <div class="link">
+          <a [routerLink]="['/sobre']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"> Sobre </a>
+          <hr #hr />
+        </div>
+        <div class="link">
+          <a [routerLink]="['/servicos']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"> Serviços </a>
+          <hr #hr />
+        </div>
+        <div class="link">
+          <a [routerLink]="['/carreiras']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"> Carreiras </a>
+          <hr #hr />
+        </div>
+        <div class="link">
+          <a [routerLink]="['/contatos']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"> Contato </a>
+          <hr #hr />
+        </div>
+      </div>
+      <div class="nav-button" #navButton (click)="menu()">
+        <span #span1></span>
+        <span #span2></span>
+        <span #span3></span>
+      </div>
+    </div>
+    <div class="barrinha" #barrinha>
+      <a #manchete href="#manchete"> </a>
+      <a #servicos href="#servicos"> </a>
+      <a #carreiras href="#carreiras"> </a>
+      <a #clientes href="#clientes"> </a>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="selection selection1" #selection id="manchete">
+    <a [routerLink]="['/sobre']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="content">
+      <h1 class="titulo1">
+        <span>Mais de 30 anos</span>
+        de
+        <br />
+        grandes projetos
+      </h1>
+      <h2 class="subtitulo1">Juntos desenvolvendo o futuro</h2>
+      <img src="/assets/seta.svg" class="setinha" />
+    </a>
+  </div>
+  <div class="selection selection2" id="servicos">
+    <a [routerLink]="['/servicos']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="content">
+      <h2 class="titulo2">
+        <span>Soluções</span> em software,
+        <br />
+        consultoria e outsourcing
+      </h2>
+      <h3 class="subtitulo2">
+        Mercado financeiro, integração de plataformas,
+        <br />
+        iniciativa pública e privada.
+      </h3>
+      <img src="/assets/seta.svg" class="setinha" />
+      <div class="selos">
+        <img src="/assets/selo-c.svg" />
+        <img src="/assets/selo-f.svg" />
+      </div>
+    </a>
+  </div>
+  <div class="selection selection3" id="carreiras">
+    <div class="background">
+      <a [routerLink]="['/carreiras']"  onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;" class="content">
+        <h2 class="titulo2"><span>Apaixonado</span> por tecnologia?</h2>
+        <h3 class="subtitulo2">
+          Gosta de trabalhar em equipe e desenvolver soluções?
+          <br />
+          Venha fazer parte da nossa equipe e aproveite
+          <br />
+          todos os benefícios de entrar na Pd Case.
+        </h3>
+        <img src="/assets/seta.svg" class="setinha" />
+        <div class="selos">
+          <img src="/assets/saude.svg" />
+          <img src="/assets/dente.svg" />
+          <img src="/assets/home.svg" />
+          <img src="/assets/estudo.svg" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="selection selection4" id="clientes">
+    <a href="#" class="content">
+      <h2 class="titulo2"><span>Parceiros</span> e clientes</h2>
+      <div class="clientes">
+        <img src="/assets/desenvolverr.svg" />
+        <img src="/assets/agepe.svg" />
+        <img src="/assets/banese.svg" />
+        <img src="/assets/banestes.svg" />
+        <img src="/assets/banestes-dtvm.svg" />
+        <img src="/assets/banestes-seguros.svg" />
+        <img src="/assets/banpara.svg" />
+        <img src="/assets/banco-da-amazonia.svg" />
+        <img src="/assets/nordeste.svg" />
+        <img src="/assets/brb.svg" />
+        <img src="/assets/brde.svg" />
+        <img src="/assets/caema.svg" />
+        <img src="/assets/bombeiros.svg" />
+        <img src="/assets/cdtn.svg" />
+        <img src="/assets/cemig.svg" />
+        <img src="/assets/ciasc.svg" />
+        <img src="/assets/eem.svg" />
+        <img src="/assets/iema.svg" />
+        <img src="/assets/pmmg.svg" />
+        <img src="/assets/prefeitura-bh.svg" />
+        <img src="/assets/sefaz.svg" />
+        <img src="/assets/serpro.svg" />
+        <img src="/assets/tce-ma.svg" />
+        <img src="/assets/tce-sc.svg" />
+        <img src="/assets/tj-ma.svg" />
+        <img src="/assets/emap.svg" />
+      </div>
+    </a>
+  </div>
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,155 @@
+main {
+  background: var(--cor-separador);
+  display: block;
+  unicode-bidi: isolate;
+}
+
+body,
+input,
+textarea,
+select {
+  font: 16px / 1.625 "Raleway", sans-serif;
+  background: var(--cor-bg);
+  color: var(--cor-fonte);
+}
+
+.manchete {
+  background: url(/assets/logo-bg2.svg) 20% center / auto 110%,
+    url(/assets/logo-bg2.svg) 0 center / auto 160% fixed,
+    radial-gradient(ellipse at left top, var(--cor-primaria), #000);
+}
+
+section {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.container {
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 100%;
+  padding: calc(var(--margem) * 2.5) var(--margem);
+}
+
+.container + .container {
+  padding-top: 0;
+}
+
+.container,
+nav a,
+.rel,
+.txt-destaque,
+.decor {
+  position: relative;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+h1 {
+  font-size: 32px; /* Mobile: tamanho específico */
+  font-family: "Vollkorn", serif;
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 40px 0px -24px; /* Margens conforme imagem */
+  color: #ffffffd9; /* Cor com opacidade */
+  display: block;
+  unicode-bidi: isolate;
+}
+
+h2 {
+  font-family: "Vollkorn", serif;
+  font-size: calc(var(--margem) + 6px);
+  line-height: 1.25;
+  margin-bottom: var(--margem);
+}
+
+h3 {
+  font-size: calc(var(--margem) / 2 + 12px);
+  font-weight: bold;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+  margin: 0 0 var(--margem);
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+p + h2,
+ul + h2,
+ul + h3,
+h2 + .grid,
+.success,
+.error {
+  margin-top: calc(var(--margem) * 2);
+}
+
+.grid {
+  display: grid;
+  gap: calc(var(--margem) * 2);
+}
+
+.grid-3 {
+  grid-template-columns: 1fr; /* Mobile: uma coluna */
+}
+
+.bg-secundaria,
+.bg-terciaria {
+  background: var(--cor-secundaria);
+  color: var(--cor-bg);
+}
+
+.bg-terciaria {
+  background: var(--cor-terciaria);
+}
+
+.margem,
+.success,
+.error {
+  padding: var(--margem);
+}
+
+/* Ajustes para telas maiores */
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 1008px;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr); /* Retorna a 3 colunas */
+  }
+
+  h1 {
+    font-size: calc(var(--margem) * 2); /* Tamanho original no desktop */
+    margin: calc(var(--margem) * 5) 0 0;
+    color: var(--cor-fonte); /* Cor original no desktop */
+  }
+
+  h1:not(.maior)::before,
+  h1:not(.maior)::after {
+    content: "";
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 1px;
+    width: 24px;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 15%;
+  }
+
+  h1:not(.maior)::after {
+    left: 24px;
+    top: 50%;
+    bottom: 0;
+  }
+}

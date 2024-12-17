@@ -1,0 +1,21 @@
+<header [class.scrolled]="scrolled">
+  <div class="container">
+    <div class="brand">
+      <a [routerLink]="['/index']" id class="logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">PD Case</a>
+    </div>
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul class="links">
+        <li><a [routerLink]="['/sobre']" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Sobre</a></li>
+        <li><a [routerLink]="['/servicos']" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Serviços</a></li>
+        <li><a [routerLink]="['/carreiras']" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Carreiras</a></li>
+        <li><a [routerLink]="['/contatos']" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+

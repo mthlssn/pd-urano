@@ -1,0 +1,114 @@
+footer {
+  background-color: #0d1117;
+  color: var(--cor-fonte-fraca);
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.coluna {
+  min-width: 200px;
+  flex: 1;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
+}
+
+dt {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+dd {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+dd a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+dd a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+dd a:hover::after {
+  width: 100%;
+}
+
+.coluna.logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.coluna.logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.coluna.logo p {
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social a {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-size: cover;
+}
+
+.icone-instagram {
+  background: url("/assets/icones.svg") no-repeat;
+  float: left;
+}
+
+.icone-facebook {
+  background: url("/assets/icones.svg") no-repeat;
+  background-position-y: -24px;
+  float: left;
+}
+
+.icone-linkedin {
+  background: url("/assets/icones.svg") no-repeat;
+  background-position-y: -72px;
+  float: left;
+}
+
+#logo {
+  display: inline-block;
+  height: 90px;
+  width: 355px;
+  background: url("/assets/logo-pdcase.svg") no-repeat center;
+  background-size: 180px;
+  background-position: center -90px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  filter: invert();
+}

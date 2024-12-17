@@ -1,0 +1,91 @@
+<main>
+  <section class="manchete">
+    <div class="container">
+      <h1>Garantias de crédito</h1>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <h3>PD Garantias</h3>
+      <p>
+        É um sistema eletrônico que permite validar dentro do fluxo de propostas
+        os limites sobre o valor do crédito, bem como a obrigatoriedade de tipos
+        de garantias a serem oferecidas pelo mutuário para deferimento da
+        proposta em análise.
+      </p>
+    </div>
+    <div class="container">
+      <div class="linha">
+        <div class="coluna">
+          <h2>Diminuindo os riscos de perdas</h2>
+          <p>
+            O princípio fundamental na concessão de operações de crédito exige
+            uma avaliação do risco de não pagamento, onde se insere a capacidade
+            de retorno dos empréstimos e a segurança das garantias oferecidas. O
+            módulo de Garantias de Crédito define as exigências mínimas para
+            cada produto, permitindo validar os limites de crédito e a
+            obrigatoriedade de garantias para aprovação.
+          </p>
+        </div>
+        <div class="coluna">
+          <h3>Processo de validação</h3>
+          <p>
+            Dentro do trâmite das propostas administradas na fase de
+            <a
+              class="link"
+              [routerLink]="['/analise-e-atendimento']"
+              onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;"
+              >ANÁLISE &amp; ATENDIMENTO</a
+            >, a verificação das exigências de garantias é um fator impeditivo
+            para aprovação do crédito, caso não esteja contemplada.
+          </p>
+          <p>
+            O GESTOR DE CRÉDITO define os parâmetros do sistema para
+            funcionamento do módulo de GARANTIAS, enquanto as LINHAS DE CRÉDITO
+            criam bases de informações definidas pelo Banco Central.
+          </p>
+          <p>
+            A parametrização feita a partir das Linhas de Crédito é utilizada na
+            validação e aceite das propostas, aplicadas na emissão de contratos
+            e no envio do CADOC 3040 – Central de Risco.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="linha">
+        <div class="coluna">
+          <h3>Integração aos demais módulos</h3>
+          <p>
+            As funções do módulo de GARANTIAS são utilizadas pelos demais
+            sistemas integrados, com acesso mínimo ao sistema. Exceto na
+            parametrização, todas as etapas do processo de crédito são validadas
+            através de serviços padronizados que aplicam as regras de negócios e
+            retornam ao processo de origem o resultado das validações.
+          </p>
+        </div>
+        <div class="coluna">
+          <h3>Processo de concessão de Crédito</h3>
+          <ol>
+            <li>
+              Propostas de crédito são analisadas quanto às garantias oferecidas
+              e validadas pela LINHA DE CRÉDITO.
+              <ol>
+                <li>Se há inconsistências, a proposta é indeferida.</li>
+                <li>
+                  Se deferida, as garantias são utilizadas na emissão do
+                  contrato.
+                </li>
+              </ol>
+            </li>
+            <li>As garantias são contabilizadas nas contas do CADOC 3040.</li>
+            <li>
+              Outras funções, como reavaliação e execução, são atendidas pelo
+              sistema.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

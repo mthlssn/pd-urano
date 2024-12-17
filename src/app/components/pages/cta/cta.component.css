@@ -1,0 +1,174 @@
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-pagina {
+  font: 16px / 1.625 "Raleway", sans-serif;
+  font-family: "Vollkorn", serif;
+  font-size: 48px;
+  font-weight: bold;
+  margin-left: 24px;
+
+  margin-top: calc((var(--margem) * 5) - 18px);
+  color: var(--cor-fonte);
+}
+
+.titulo-texto {
+  font: 16px / 1.625 "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--cor-fonte);
+}
+
+.texto {
+  font: 16px / 1.625 "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: var(--cor-fonte);
+}
+
+.container-div {
+  max-width: 1008px;
+  margin: auto;
+  margin-bottom: 60px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+
+  width: 100%;
+}
+
+.container-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  width: 100%;
+}
+
+.titulo-colunas {
+  margin-bottom: 24px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-top: 5px;
+}
+
+.lista-coluna {
+  color: var(--cor-bg);
+}
+
+.container-colunas {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.coluna {
+  background-color: var(--cor-secundaria);
+
+  height: 100%;
+  width: 100%;
+}
+
+.coluna-pequena {
+  max-width: 205px;
+}
+
+.container-titulo-coluna {
+  background-color: var(--cor-terciaria);
+}
+
+.container-titulo-coluna,
+.container-texto-coluna {
+  padding: 24px;
+}
+
+.container-titulo-coluna p,
+.container-texto-coluna p {
+  color: var(--cor-bg);
+}
+
+.container-titulo-coluna p {
+  font-weight: bold;
+}
+
+.manchete {
+  background: url(/assets/logo-bg2.svg) 20% center / auto 110%,
+    url(/assets/logo-bg2.svg) 0 center / auto 160% fixed,
+    radial-gradient(ellipse at left top, var(--cor-primaria), #000);
+}
+
+.container-titulo {
+  box-sizing: border-box;
+  max-width: 1008px;
+  margin: auto;
+  margin-bottom: 60px;
+  padding: calc(var(--margem) * 2.5) 0;
+  position: relative;
+}
+
+@media screen and (min-width: 1000px) {
+  h1:not(.maior)::before,
+  h1:not(.maior)::after {
+    content: "";
+    border: solid var(--cor-secundaria);
+    border: solid rgba(255, 255, 255, 0.15);
+    border-width: 0 1px;
+    width: 24px;
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 15%;
+  }
+
+  h1:not(.maior)::after {
+    left: 24px;
+    top: 50%;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .titulo-pagina {
+    margin-top: var(--margem);
+    font-size: 32px;
+  }
+
+  .container-titulo {
+    padding: 50px 16px 10px 16px;
+  }
+
+  .container-texto {
+    padding: 0 16px;
+  }
+
+  .container-div {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .container-colunas {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .container-titulo-coluna,
+  .container-texto-coluna {
+    padding: 16px;
+  }
+
+  .coluna-pequena {
+    max-width: 100%;
+  }
+}
