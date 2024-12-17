@@ -24,7 +24,7 @@ h1:not(.maior) {
 h1 {
     font-size: calc(var(--margem)* 2);
     line-height: 1.25;
-    font-weight: 400;
+    font-weight: bold;
 }
 h1, h2 {
     font-family: "Vollkorn", serif;
